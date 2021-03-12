@@ -5,8 +5,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>web-model</module>
         <module>web-app</module>
+        <module>web-model</module>
     </modules>
 
     <parent>
@@ -29,5 +29,17 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
